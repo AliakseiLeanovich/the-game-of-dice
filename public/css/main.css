@@ -1,0 +1,16 @@
+body{
+  background-image: url("../images/dice.jpg");
+  background-size: cover;
+  text-align: center;  
+}
+
+section {
+  padding-top: 150px;
+  display: inline-block;
+}
+
+h1, h2 {
+  color: #FFF;
+  background: rgba(0,0,0,0.5);
+}
+

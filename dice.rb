@@ -16,7 +16,7 @@ module Dice
       error!("401 Unauthorized", 401) unless params[:access_token] == secret_token
     end
 
-    get '/' do
+    post '/rate' do
       rate = params[:rate]
       score = params[:score].to_i
       unless rate.nil?
@@ -25,7 +25,7 @@ module Dice
         result = (rate.to_i == dice1 + dice2) ? 1 : -1 
         score += result
       end
-      { score: score, dice_1: dice1, dice_2: dice2 }
+      { score: score, dice1: dice1, dice2: dice2 }
     end
   end
 end
